@@ -763,6 +763,10 @@ html {
 /* فقط برای موبایل */
 @media (max-width: 768px) {
 
+
+    .hero_title{
+      font-size:xx-large;  
+    }
     .nav-links,
     .lang-dropdown {
         display: none !important;

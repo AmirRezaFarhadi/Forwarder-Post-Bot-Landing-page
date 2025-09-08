@@ -785,7 +785,12 @@ html {
     .lang-dropdown {
         display: none !important;
     }
-
+            
+        .play-icon{
+            width: 55%;
+            height: 55%;
+        }
+        
     .navbar {
         justify-content: space-between;
         padding: 0.8rem 1.2rem;

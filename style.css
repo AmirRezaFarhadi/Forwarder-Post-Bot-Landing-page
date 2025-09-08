@@ -764,8 +764,12 @@ html {
 @media (max-width: 768px) {
 
 
-    .hero_title{
-      font-size:medium;  
+    .hero h1{
+      font-size:130%;  
+    }
+    
+    .hero p{
+        font-size: 75%;
     }
     .nav-links,
     .lang-dropdown {

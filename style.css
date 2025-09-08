@@ -749,3 +749,145 @@ body,
 html {
     overflow-x: hidden;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== Responsive ========== */
+
+/* موبایل (تا 600px) */
+@media (max-width: 600px) {
+
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.8rem;
+    }
+
+    .nav-links a {
+        font-size: 0.95rem;
+    }
+
+    .navbar-right {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .lang-dropdown {
+        width: auto;
+    }
+
+    /* Hero */
+    .hero h1 {
+        font-size: 2rem;
+        line-height: 1.4;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    /* Logos */
+    .logo-slider {
+        width: 100%;
+    }
+
+    .logo-track img {
+        height: 28px;
+        margin: 0 1rem;
+    }
+
+    /* Features */
+    .features h2 {
+        font-size: 1.8rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Testimonials */
+    .testimonials h2 {
+        font-size: 1.8rem;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* FAQ */
+    .faq h2 {
+        font-size: 1.8rem;
+    }
+
+    .faq-box {
+        padding: 1rem;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 0.85rem;
+        padding: 1rem;
+    }
+}
+
+/* تبلت (بین 600 تا 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        padding: 1rem 1.5rem;
+    }
+
+    .nav-links {
+        flex: 1 1 100%;
+        justify-content: center;
+        margin-top: 0.8rem;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.05rem;
+        max-width: 90%;
+    }
+
+    .features h2,
+    .testimonials h2,
+    .faq h2 {
+        font-size: 2.2rem;
+    }
+
+    .features-grid,
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

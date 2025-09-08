@@ -1,0 +1,751 @@
+/* ===== Reset & Global ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", "Poppins", sans-serif;
+    background: #0a0a0a;
+    color: #fff;
+    line-height: 1.6;
+}
+
+
+
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* --- Get Started --- */
+/* دکمه اصلی */
+.btn.primary {
+    background: #6c3df4;
+    color: #fff;
+    padding: 0.9rem 2rem;
+    border-radius: 40px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn.primary:hover {
+    background: #5328c7;
+    transform: translateY(-2px);
+}
+
+.star-icon svg {
+    color: white;
+    width: 28px;
+        /* 🔥 تغییر سایز عرض */
+        height: 28px;
+        /* 🔥 تغییر سایز ارتفاع */
+        margin-left: 5px;
+        margin-top: 5px;
+        /* فاصله از متن */
+        color: white;
+        /* رنگ */
+}
+
+/* انیمیشن چرخش یک دور */
+@keyframes rotate-once {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* هاور روی دکمه → فقط آیکون ستاره بچرخه */
+.btn.primary:hover .star-icon svg {
+  animation: rotate-once 0.3s linear 1;
+}
+
+
+
+
+/* انیمیشن چرخش یک دور */
+@keyframes rotate-once {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+/* هاور روی دکمه → فقط آیکون ستاره بچرخه */
+.btn.primary:hover .star-icon svg {
+    animation: rotate-once 0.3s linear 1;
+}
+
+
+
+/* موج سفید دور دکمه ویدیو */
+.play-icon::before,
+.play-icon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.4);
+    animation: pulse-wave 2.5s infinite ease-out;
+    z-index: 0;
+}
+
+.play-icon::after {
+    animation-delay: 1.2s;
+    /* موج دوم با تاخیر */
+}
+
+@keyframes pulse-wave {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(2.5);
+        opacity: 0;
+    }
+}
+
+/* محتوای داخلی بالای موج‌ها بمونه */
+.play-icon svg {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* دکمه ویدیو */
+.btn.video {
+    background: #000;
+    /* 🔥 مشکی */
+    color: #fff;
+    padding: 0.9rem 2rem;
+    border-radius: 40px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.play-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #6c3df4;
+    position: relative;
+}
+
+.play-icon svg {
+    width: 14px;
+    /* 🔥 تغییر سایز ایکون */
+    height: 14px;
+    margin-left: 1px;
+    /* جا‌به‌جایی داخل دایره */
+    color: white;
+    /* رنگ سفید */
+}
+
+
+
+/* ===== Navbar ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(20, 20, 20, 0.7);
+    border-radius: 40px;
+    padding: 1rem 2.5rem;
+    max-width: 1150px;
+    margin: 1rem auto;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease-in-out;
+
+}
+
+
+.navbar.shrink {
+    padding: 0.5rem 2rem;
+    max-width: 950px;
+    background: rgba(20, 20, 20, 0.9);
+}
+
+/* لوگو */
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.logo-img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.logo-wrapper:hover .logo-img {
+    animation: spin 0.6s linear infinite;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Nav links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+/* Language Dropdown */
+.lang-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.lang-btn {
+    background: #141414;
+    border: none;
+    color: #fff;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.lang-btn svg {
+    width: 16px;
+    height: 16px;
+    color: #3b82f6;
+}
+
+.arrow {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.3s;
+}
+
+.lang-dropdown.open .arrow {
+    transform: rotate(180deg);
+}
+
+.lang-menu {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background: #141414;
+    border-radius: 16px;
+    list-style: none;
+    padding: 0.5rem 0;
+    min-width: 140px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.lang-menu li {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.lang-menu li:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.lang-dropdown.open .lang-menu {
+    display: block;
+}
+
+/* Right section */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn.StartNow {
+    background: #6c3df4;
+    color: #fff;
+    padding: 0.6rem 1.4rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn.signup:hover {
+    background: #5328c7;
+    transform: translateY(-2px);
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    text-align: center;
+    padding: 6rem 2rem 6rem;
+    background: linear-gradient(to bottom, #0a0a0a, #221048);
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+}
+
+.hero .highlight {
+    font-style: italic;
+    color: #eaeaea;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 650px;
+    margin: 0 auto 2.5rem;
+    opacity: 0.8;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: -6rem;
+}
+
+.btn.primary,
+.btn.secondary {
+    padding: 0.9rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.btn.primary {
+    background: #6c3df4;
+    color: #fff;
+}
+
+.btn.primary:hover {
+    background: #5328c7;
+    transform: translateY(-3px);
+}
+
+.btn.secondary {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+}
+
+.btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+/* ===== Logos Section ===== */
+.logos {
+    text-align: center;
+    padding: 3rem 0;
+    background: #221048;
+    position: relative;
+    overflow: hidden;
+}
+
+.logos p {
+    opacity: 0.6;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.logo-slider {
+    overflow: hidden;
+    position: relative;
+    width: 30%;
+    margin: 0 auto;
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #000 10%, #000 90%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #000 10%, #000 90%, rgba(0, 0, 0, 0) 100%);
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+}
+
+.logo-track {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: scroll 18s linear infinite;
+    width: max-content;
+    /* ✅ فقط به اندازه‌ی لوگوها */
+}
+
+.logo-track img {
+    height: 40px;
+    margin: 0 2rem;
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+}
+
+.logo-track img:hover {
+    transform: scale(1.15);
+    opacity: 1;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* ===== Features Section ===== */
+.features {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: radial-gradient(circle at center, rgba(108, 61, 244, 0.15), transparent 70%);
+    position: relative;
+}
+
+.features h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 1.5rem 0 3rem;
+}
+
+.features h2 em {
+    color: #cfc9f6;
+}
+
+/* Button with star */
+.btn-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(108, 61, 244, 0.15);
+    color: #cfc9f6;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 9999px;
+}
+
+.btn-tag .icon {
+    color: #6c3df4;
+    animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.3);
+        opacity: 0.6;
+    }
+}
+
+/* Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.feature {
+    padding: 1.5rem;
+    text-align: left;
+    border-left: 2px solid rgba(108, 61, 244, 0.4);
+}
+
+.feature h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.feature p {
+    font-size: 0.95rem;
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+/* ===== Floating Start Now Button ===== */
+.btn-floating {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #6c3df4;
+    color: #fff;
+    padding: 0.9rem 1.8rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    display: none;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 4px 15px rgba(108, 61, 244, 0.4);
+    z-index: 1000;
+}
+
+.btn-floating:hover {
+    background: #5328c7;
+    transform: translateY(-3px);
+}
+
+
+
+
+/* ===== Testimonials Section ===== */
+.testimonials {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: radial-gradient(circle at center, rgba(108, 61, 244, 0.1), transparent 70%);
+    position: relative;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.testimonials h2 em {
+    font-style: italic;
+    color: #cfc9f6;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: left;
+    transition: transform 0.3s, background 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px;
+    /* 🔥 همه باکس‌ها یکسان میشن */
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.testimonial p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+    flex-grow: 1;
+    /* 🔥 متن‌ها کشیده میشن تا تراز بشه */
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author strong {
+    font-size: 1rem;
+    color: #fff;
+}
+
+
+
+
+
+.btn-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(108, 61, 244, 0.15);
+    color: #fff;
+    /* 🔥 متن و آیکون سفید */
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 9999px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-tag .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    /* آیکون سفید */
+}
+
+.btn-tag svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+
+
+
+
+
+
+.faq {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: radial-gradient(circle at center, rgba(108, 61, 244, 0.15), transparent 70%);
+}
+
+.faq h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+    line-height: 1.3;
+}
+
+.faq h2 em {
+    font-style: italic;
+    color: #cfc9f6;
+}
+
+/* FAQ Box */
+.faq-box {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    background: rgba(34, 16, 72, 0.7);
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.faq-box details {
+    background: linear-gradient(90deg, #2a1662, #221048);
+    margin-bottom: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.faq-box summary {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-box details[open] summary {
+    color: #cfc9f6;
+}
+
+.faq-box p {
+    margin-top: 0.8rem;
+    font-size: 0.95rem;
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
+
+
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    background: rgba(20, 20, 20, 0.6);
+    border-radius: 20px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+section,
+header,
+footer {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+body,
+html {
+    overflow-x: hidden;
+}

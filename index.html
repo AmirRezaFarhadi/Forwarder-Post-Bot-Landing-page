@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Bot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ===== Navbar ===== -->
+    <nav class="navbar">
+        <div class="logo-wrapper">
+            <img src="assets/logo.svg" alt="InfinityBot Logo" class="logo-img">
+            <div class="logo">InfinityBot</div>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#" data-key="home">Home</a></li>
+            <li><a href="#features" data-key="features">Features</a></li>
+            <li><a href="#" data-key="pricing">Pricing</a></li>
+            <li><a href="#" data-key="contact">Contact</a></li>
+        </ul>
+
+        <div class="navbar-right">
+            <!-- Language Dropdown -->
+            <div class="lang-dropdown">
+                <button class="lang-btn">
+                    <span class="lang-icon">
+                        <!-- Globe SVG -->
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.28906 3.75827H10.7723M6.03067 2.17773V3.75827M8.6649 14.822L11.826 7.44619L14.987 14.822M9.63627 12.7146H14.0157M8.97113 3.75827C8.97113 3.75827 8.17098 6.85349 6.26117 9.19136C4.35135 11.5292 2.34275 12.7146 2.34275 12.7146"
+                                stroke="white" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path
+                                d="M8.13664 11.1337C8.13664 11.1337 6.98416 10.2446 5.76583 8.6641C4.5475 7.08356 3.92188 5.86523 3.92188 5.86523"
+                                stroke="white" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                    <span class="lang-text">EN</span>
+                    <span class="lang-arrow">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                            height="14" width="14" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z">
+                            </path>
+                        </svg>
+                    </span>
+                </button>
+                <ul class="lang-menu">
+                    <li data-lang="en">English</li>
+                    <li data-lang="pr">Persian</li>
+                    <li data-lang="ar">العربية</li>
+                </ul>
+            </div>
+            <a href="https://t.me/amirforwarderbot" target="_blank" class="btn StartNow" data-key="signup">Start Now</a>
+        </div>
+    </nav>
+
+    <!-- ===== Hero Section ===== -->
+    <header class="hero">
+        <h1 data-key="hero_title">
+            Seamless Forwarding And <br><span class="highlight">Smart Telegram Automation</span>.
+        </h1>
+        <p data-key="hero_subtitle">
+            InfinityBot helps you easily forward, manage, and schedule Telegram posts — so you save time and boost
+            productivity.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="https://t.me/amirforwarderbot" class="btn primary">
+                <span data-key="btn_getstarted">Get Started</span>
+                <span class="star-icon">
+                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10 0.5C9.55417 8.76875 9.1875 9.09875 0 9.5C9.1875 9.90125 9.55417 10.2312 10 18.5C10.4458 10.2312 10.8125 9.90125 20 9.5C10.8125 9.09875 10.4458 8.76875 10 0.5Z"
+                            fill="currentColor"></path>
+                    </svg>
+                </span>
+            </a>
+
+            <a href="#video" class="btn video">
+                <span data-key="btn_watchvideo">Watch Video</span>
+                <span class="play-icon">
+                    <svg data-icon="true" width="24" height="28" viewBox="0 0 24 28" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 14L0 28L0 0L24 14Z" fill="white"></path>
+                    </svg>
+                </span>
+            </a>
+        </div>
+    </header>
+
+    <!-- ===== Logos Section ===== -->
+    <section class="logos">
+        <p data-key="trusted_by">Trusted By Thousands of Companies</p>
+        <div class="logo-slider">
+            <div class="logo-track">
+                <img src="assets/spotify.webp" alt="Spotify">
+                <img src="assets/slack.webp" alt="Slack">
+                <img src="assets/dropbox.webp" alt="Dropbox">
+                <img src="assets/webflow.webp" alt="Webflow">
+                <img src="assets/zoom.webp" alt="Zoom">
+                <img src="assets/spotify.webp" alt="Spotify">
+                <img src="assets/slack.webp" alt="Slack">
+                <img src="assets/dropbox.webp" alt="Dropbox">
+                <img src="assets/webflow.webp" alt="Webflow">
+                <img src="assets/zoom.webp" alt="Zoom">
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Features Section ===== -->
+    <section class="features" id="features">
+    <button class="btn-tag" data-key="features_btn">
+        Features At A Glance
+        <span class="star-icon">
+            <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M10 0.5C9.55417 8.76875 9.1875 9.09875 0 9.5C9.1875 9.90125 9.55417 10.2312 10 18.5C10.4458 10.2312 10.8125 9.90125 20 9.5C10.8125 9.09875 10.4458 8.76875 10 0.5Z"
+                    fill="currentColor"></path>
+            </svg>
+        </span>
+    </button>
+
+
+        <h2 data-key="features_title">
+            InfinityBot Makes <br> Your <em>Automation Effortless</em>
+        </h2>
+        <div class="features-grid">
+            <div class="feature">
+                <h3 data-key="feature1_title">Easy To Use</h3>
+                <p data-key="feature1_desc">InfinityBot is designed with simplicity in mind — just connect your channels
+                    and start forwarding instantly.</p>
+            </div>
+            <div class="feature">
+                <h3 data-key="feature2_title">Smart Scheduling</h3>
+                <p data-key="feature2_desc">Easily schedule up to 100 posts per day, manage your slots, and keep your
+                    channels active.</p>
+            </div>
+            <div class="feature">
+                <h3 data-key="feature3_title">Advanced Control</h3>
+                <p data-key="feature3_desc">Set custom rules, block/unblock users, and manage channel joins for full
+                    control.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Testimonials ===== -->
+    <section class="testimonials">
+        <button class="btn-tag" data-key="stories_btn">
+            Stories
+            <span class="star-icon">
+                <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M10 0.5C9.55417 8.76875 9.1875 9.09875 0 9.5C9.1875 9.90125 9.55417 10.2312 10 18.5C10.4458 10.2312 10.8125 9.90125 20 9.5C10.8125 9.09875 10.4458 8.76875 10 0.5Z"
+                        fill="currentColor"></path>
+                </svg>
+            </span>
+        </button>
+        <h2 data-key="stories_title">Here's What People Are Saying <em>About InfinityBot</em></h2>
+
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <p data-key="story1">"InfinityBot made managing my channels so much easier. The auto-forward works
+                    perfectly."</p>
+                <div class="author">
+                    <img src="assets/user1.jpg" alt="User1">
+                    <div><strong>John M.</strong><br>User</div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <p data-key="story2">"I love how simple it is! Scheduling and daily limits are lifesavers."</p>
+                <div class="author">
+                    <img src="assets/user2.jpg" alt="User2">
+                    <div><strong>Emily R.</strong><br>User</div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <p data-key="story3">"The forced-join feature helped me grow my channel really fast."</p>
+                <div class="author">
+                    <img src="assets/user3.jpg" alt="User3">
+                    <div><strong>David K.</strong><br>User</div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <p data-key="story4">"InfinityBot is by far the best bot I’ve tried. Reliable and smooth."</p>
+                <div class="author">
+                    <img src="assets/user4.jpg" alt="User4">
+                    <div><strong>Sophia L.</strong><br>User</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq">
+        <button class="btn-tag" data-key="faq_btn">
+            FAQ
+            <span class="star-icon">
+               <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 0.5C9.55417 8.76875 9.1875 9.09875 0 9.5C9.1875 9.90125 9.55417 10.2312 10 18.5C10.4458 10.2312 10.8125 9.90125 20 9.5C10.8125 9.09875 10.4458 8.76875 10 0.5Z" fill="currentColor"></path></svg>
+            </span>
+        </button>
+        <h2 data-key="faq_title">Frequently <em>Asked Questions</em></h2>
+        <div class="faq-box">
+            <details>
+                <summary data-key="faq1_q">What is InfinityBot?</summary>
+                <p data-key="faq1_a">InfinityBot is a smart Telegram automation tool...</p>
+            </details>
+            <details>
+                <summary data-key="faq2_q">How does auto-forward work?</summary>
+                <p data-key="faq2_a">You set a source & destination channel. Bot forwards posts instantly or on
+                    schedule.</p>
+            </details>
+            <details>
+                <summary data-key="faq3_q">Can I schedule posts?</summary>
+                <p data-key="faq3_a">Yes! You can set daily limits, times, and slots easily.</p>
+            </details>
+            <details>
+                <summary data-key="faq4_q">Does it support multiple languages?</summary>
+                <p data-key="faq4_a">Yes, English, Persian, and Arabic are supported.</p>
+            </details>
+            <details>
+                <summary data-key="faq5_q">What about unwanted posts?</summary>
+                <p data-key="faq5_a">You can filter posts with keywords or captions.</p>
+            </details>
+            <details>
+                <summary data-key="faq6_q">Is my data safe?</summary>
+                <p data-key="faq6_a">Yes. InfinityBot never stores personal messages.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- ===== Floating Button ===== -->
+    <a href="#signup" class="btn-floating" id="startNowBtn" data-key="signup">Start Now</a>
+
+    <!-- ===== Footer ===== -->
+    <footer>
+        <p data-key="footer">© 2025 InfinityBot. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
